@@ -1,0 +1,51 @@
+.sidebar {
+    background-color: #0d2436;
+    background: -webkit-linear-gradient(to right, #0d2436, #243b55); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0d2436, #243b55);  
+    color: #ecf0f1;
+    min-height: 53.75rem;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    left: 0;
+    max-width: 18rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      
+    .title {
+      background-color: #34495e;
+      padding: 30px 60px;
+      text-align: center;
+  
+      h1 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+    .link{
+      text-decoration: none;
+      color: white;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  
+      li {
+        padding: 15px 20px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        border-bottom: 1px solid #34495e;
+  
+        &:hover {
+          background-color: #3d566e;
+        }
+  
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }

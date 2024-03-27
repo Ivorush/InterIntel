@@ -1,0 +1,241 @@
+.home {
+   width: 100%;
+   margin: 0;
+   background-color: rgba(241, 241, 241, 1);
+   .homeContainer{
+    flex: 3;
+    
+    h1{
+        font-size: 20px;
+        font-weight: 600;
+        padding: 20px;
+        color: white;
+        background-color: #0d2436;
+        background: -webkit-linear-gradient(to right, #0d2436, #243b55); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #0d2436, #243b55);
+    
+        border: 1px solid rgba(128, 128, 128, 0.307);
+        
+    }
+    .header{
+        background-color: white;
+        border-radius: 10px;
+        border: 1px solid rgba(128, 128, 128, 0.307);
+        margin: 20px;
+        padding: 15px;
+        
+        width: 600px;
+        .title{
+            display: flex;
+            flex-direction: column;
+            padding:5px 0px;
+            
+            label{
+                padding: 10px 0px;
+                font-size: 17px;
+            }
+            input{
+                padding: 5px;
+                font-size: 17px;
+                
+            }
+            input:focus {
+                background-color: rgba(229, 237, 239, 0.213);
+              }
+        }
+        .description{
+            display: flex;
+            flex-direction: column;
+            padding:10px 0px;
+            label{
+                padding: 10px 0px;
+            }
+            textarea{
+                padding: 10px;
+                font-size: 17px;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                 sans-serif;
+            }
+            input:focus {
+                background-color: rgba(229, 237, 239, 0.213);
+              }
+        }
+    }.option{
+        background-color: white;
+        border-radius: 10px;
+        border: 1px solid rgba(128, 128, 128, 0.307);
+        margin: 20px;
+        padding: 0 20px;
+        width: 600px;
+        .addOption{
+            padding: 20px 0;
+        }
+       .optionContainer{
+          display: flex;
+          flex-direction: row;
+          padding: 10px;
+          border: 1px solid rgba(128, 128, 128, 0.263);
+          border-radius: 10px;
+          justify-content: space-between;
+         
+          .left{
+            display: flex;
+            flex-direction: column;
+            span{
+                padding: 10px 0;
+            }
+          }.right{
+            .button {
+                padding: 10px 20px;
+                font-size: 13px;
+                font-weight: 600;
+                color: #000000;
+                background-color: #ffffff;
+                border: 1px solid rgba(0, 0, 0, 0.211);
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+              
+                &:hover {
+                  background-color: #e6f2ff;
+                }
+              
+                &:active {
+                  background-color: #e1efff;
+                }
+              
+                &:disabled {
+                  background-color: #6c757d;
+                  cursor: not-allowed;
+                }
+              }
+          }
+       }
+       .optionBar{
+            border: 1px solid rgba(128, 128, 128, 0.263);
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            
+        .optionName{
+            display: flex;
+            flex-direction: column;
+            
+            label{
+                padding: 10px 0px;
+            }
+            input{
+                padding: 5px;
+                font-size: 17px;
+            }
+            input:focus {
+                background-color: rgba(229, 237, 239, 0.213);
+              }
+        }
+        .optionValues{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 20px;
+           
+            label{
+                padding: 10px 0px;
+            }
+            input{
+                padding: 5px;
+                font-size: 17px;
+            }
+            input:focus {
+                background-color: rgba(229, 237, 239, 0.213);
+              }
+           
+
+        }
+        .optionButton{
+            padding: 10px 20px;
+        }
+
+       }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #000000;
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.211);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          
+            &:hover {
+              background-color: #e6f2ff;
+            }
+          
+            &:active {
+              background-color: #e1efff;
+            }
+          
+            &:disabled {
+              background-color: #6c757d;
+              cursor: not-allowed;
+            }
+          }
+    } .variant{
+        background-color: white;
+        border-radius: 10px;
+        border: 1px solid rgba(128, 128, 128, 0.307);
+        margin: 20px;
+        padding: 15px;
+        width: 600px;
+        input{
+            padding: 5px;
+            font-size: 17px;
+            width: 100px;
+            
+        }
+        input:focus {
+            background-color: rgba(229, 237, 239, 0.213);
+          }
+
+        .variantContainer{
+            border: 1px solid rgba(128, 128, 128, 0.307);
+            padding: 10px 10px;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+        }
+       
+    }.buttonContainer{
+        margin: 20px;
+    }
+    .button{
+            padding: 10px 20px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #257ee3;
+            border: 1px solid rgba(0, 0, 0, 0.211);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          
+            &:hover {
+              background-color: #56a5f9;
+              
+            }
+          
+            &:active {
+              background-color: #e1efff;
+            }
+          
+            &:disabled {
+              background-color: #6c757d;
+              cursor: not-allowed;
+            }
+    }
+
+   }
+}
