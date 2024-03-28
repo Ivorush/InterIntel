@@ -3,7 +3,7 @@
 ## Overview
 
 This repository contains a web application developed as part of the InterIntel Web Developer Interview Test. The application allows users to add product options and variants for an e-commerce platform, similar to the functionality seen in Shopify.
-
+### live link: https://interintel-interview.web.app/
 The focus of this project is on the user interface (UI) and logic for capturing product option names, values, and the logic for generating variants once the product options are entered.
 
 ## Getting Started
