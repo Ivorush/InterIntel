@@ -54,7 +54,7 @@ The application will be available at `https://interintel-interview.web.app/`.
 
 ## Authors
 
-- **Ivorush Ayieko** - *Initial work* - [Ivorush Ayieko](https://github.com/Ivorush)
+- **Ivorush Ayieko** - *Initial work* - [Ivorush Ayieko portfolio](https://ivorush.netlify.app)
 
 ## Acknowledgments
 
