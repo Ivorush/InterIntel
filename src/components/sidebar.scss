@@ -1,7 +1,5 @@
 .sidebar {
-    background-color: #0d2436;
-    background: -webkit-linear-gradient(to right, #0d2436, #243b55); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0d2436, #243b55);  
+    background-color: rgba(241, 241, 241, 1);
     color: #ecf0f1;
     min-height: 53.75rem;
     display: flex;
@@ -9,7 +7,6 @@
     position: sticky;
     top: 0;
     left: 0;
-    max-width: 18rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       
     .title {
@@ -25,7 +22,7 @@
     }
     .link{
       text-decoration: none;
-      color: white;
+      color: rgb(0, 0, 0);
     }
     ul {
       list-style: none;
@@ -41,6 +38,7 @@
   
         &:hover {
           background-color: #3d566e;
+          color: #ddf0fe;
         }
   
         &:last-child {

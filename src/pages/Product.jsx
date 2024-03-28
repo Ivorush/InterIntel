@@ -16,7 +16,7 @@ function Product() {
     <h1>Product preview</h1>
     <div className="product-card">
       <div className="product-image">
-        <img src="https://via.placeholder.com/300" alt={product.title} />
+        <img src={product.image} alt={product.title} />
       </div>
       <div className="product-details">
         <h1 className="product-title">{product.title}</h1>
@@ -37,7 +37,7 @@ function Product() {
         </div>
       </div>
     </div>
-     </div>
+  </div>
   );
 }
 

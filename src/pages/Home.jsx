@@ -2,7 +2,6 @@ import React from 'react'
 import { useState , useEffect} from 'react'
 import "./home.scss"
 import { useNavigate } from 'react-router-dom';
-import Sidebar from '../components/Sidebar';
 import { useProduct } from '../contextApi/ProductContext';
 
 
@@ -10,21 +9,23 @@ function Home() {
   
     const [isAddingOption, setIsAddingOption] = useState(false);
     const [product, setProduct] = useState({
-          title: '',
-          description: '',
-          options: [],
-          variants: []
-     });
+      title: 'Default Product Title',
+      description: 'Default product description goes here.',
+      image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',  
+      options: [],
+      variants: []
+    });
     const { setProducts } = useProduct();
     const navigate = useNavigate();
     const [currentOption, setCurrentOption] = useState({ name: '', values: [''] });
 
 
+   //update on product option 
     useEffect(() => {
          initializeVariants();
      },[product.options]);
 
-
+    //initialize variant after option name and value 
     const initializeVariants = () => {
       const newVariants = product.options.flatMap(option =>
       option.values.map(value => ({
@@ -41,29 +42,24 @@ function Home() {
     };
 
 
-    const handleChange = (event) => {
-      const { name, value } = event.target;
-      setProduct({ ...product, [name]: value });
-    };
-
-
+    //logic for handling option name change
     const handleOptionNameChange = (event) => {
       setCurrentOption({ ...currentOption, name: event.target.value });
     };
 
-
+    //logic for handling option value change
     const handleOptionValuesChange = (index, event) => {
       const newValues = [...currentOption.values];
       newValues[index] = event.target.value;
       setCurrentOption({ ...currentOption, values: newValues });
     };
  
-
+    //logic for adding option value
     const addOptionValue = () => {
        setCurrentOption({ ...currentOption, values: [...currentOption.values, ''] });
     };
 
-
+    //saving option 
     const saveOption = () => {
        if (!currentOption.name || currentOption.values.some(value => value.trim() === '')) {
           alert('Option name and values are required!');
@@ -82,25 +78,26 @@ function Home() {
       setProduct({ ...product, options: [...product.options, currentOption] });
     }
     setCurrentOption({ name: '', values: [''] }); // Reset current option
+    //generating the variants when a user is done entering the product
     initializeVariants(); 
     setIsAddingOption(false);
     };
 
 
-
+    //logic if option is to be edited
     const editOption = (index) => {
       const optionToEdit = { ...product.options[index], index }; // Copy the option and save its index
        setCurrentOption(optionToEdit);
        setIsAddingOption(true);
     };
 
-
+    //logic for handling adding option
     const addOption = () => {
        setCurrentOption({ name: '', values: [''] }); // Reset current option
        setIsAddingOption(true);
     };
  
-    
+    //logic for handling variant change
     const handleVariantChange = (index, field, value) => {
        const updatedVariants = [...product.variants];
           updatedVariants[index] = { ...updatedVariants[index], [field]: value };
@@ -108,14 +105,16 @@ function Home() {
      };
   
 
-  
+    //logic for saving the product 
     const saveProduct = () => {
       // Here you would normally send the product to the backend, but since
-      // we're not integrating with one, we'll just console log it.
-      console.log('Product saved:', product);
+      // we're not integrating with one we update to contextApi
+  
       setProducts(product);
+
+      // Redirect to preview page 
       navigate('/product');
-      // Redirect to preview page or handle preview logic here...
+      
     };
 
 
@@ -125,17 +124,7 @@ function Home() {
      <div className='homeContainer'>
        <h1>Add Product</h1>
        <form onSubmit={(e) => e.preventDefault()}>
-       <div className='header'>
-        <div className='title'>
-          <label>Title:</label>
-          <input type="text" name="title" value={product.title} onChange={handleChange} />
-        </div>
-        <div className='description'>
-          <label>Description:</label>
-          <textarea name="description" value={product.description} onChange={handleChange} />
-        </div>
-        </div>
-        <div className='option'>
+         <div className='option'>
           <h3>Options:</h3>
           {product.options
             .filter(option => option.name && option.values.every(value => value.trim() !== ''))

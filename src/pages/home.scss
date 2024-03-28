@@ -13,54 +13,8 @@
         background-color: #0d2436;
         background: -webkit-linear-gradient(to right, #0d2436, #243b55); /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #0d2436, #243b55);
-    
         border: 1px solid rgba(128, 128, 128, 0.307);
         
-    }
-    .header{
-        background-color: white;
-        border-radius: 10px;
-        border: 1px solid rgba(128, 128, 128, 0.307);
-        margin: 20px;
-        padding: 15px;
-        
-        width: 600px;
-        .title{
-            display: flex;
-            flex-direction: column;
-            padding:5px 0px;
-            
-            label{
-                padding: 10px 0px;
-                font-size: 17px;
-            }
-            input{
-                padding: 5px;
-                font-size: 17px;
-                
-            }
-            input:focus {
-                background-color: rgba(229, 237, 239, 0.213);
-              }
-        }
-        .description{
-            display: flex;
-            flex-direction: column;
-            padding:10px 0px;
-            label{
-                padding: 10px 0px;
-            }
-            textarea{
-                padding: 10px;
-                font-size: 17px;
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-                 sans-serif;
-            }
-            input:focus {
-                background-color: rgba(229, 237, 239, 0.213);
-              }
-        }
     }.option{
         background-color: white;
         border-radius: 10px;
